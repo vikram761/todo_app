@@ -20,6 +20,8 @@ saveTodoButton.onclick = function() {
   alert("Saved");
 };
 
+
+
 function onAddTodo() {
   let userInputElement = document.getElementById("todoUserInput");
   let userInputValue = userInputElement.value;
@@ -44,6 +46,11 @@ function onAddTodo() {
 addTodoButton.onclick = function() {
   onAddTodo();
 };
+
+
+function addbykeypress(event){
+    if(event.key=="Enter") onAddTodo()
+}
 
 function onTodoStatusChange(checkboxId, labelId, todoId) {
   let checkboxElement = document.getElementById(checkboxId);
